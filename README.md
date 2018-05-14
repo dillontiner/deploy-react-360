@@ -1,8 +1,8 @@
-# Deploying Your ReactVR App: init to AWS in 15 Minutes
+# Deploying Your React360 App: init to AWS in 15 Minutes
 
-These instructions step through the process of deploying a virtual reality environment on AWS starting from the ReactVR command line interface. This tutorial assumes you have an AWS account, Docker, and Node set up. See the corresponding [blog post](https://medium.com/@dillontiner/deploying-your-reactvr-app-init-to-aws-in-15-minutes-10e77b80bbd7) for more details.
+These instructions step through the process of deploying a virtual reality environment or 360 video application on AWS starting from the React360 command line interface. This tutorial assumes you have an AWS account, Docker, and Node set up. See the corresponding [blog post](https://medium.com/@dillontiner/deploying-your-reactvr-app-init-to-aws-in-15-minutes-10e77b80bbd7) for more details.
 
-First, install the ReactVR CLI and create a new project.
+First, install the React360 CLI and create a new project.
 
 ```
 $ npm install -g react-360-cli
@@ -17,7 +17,7 @@ You can make edits
 
 ### Bundle and Structure the Assets for Deployment
 
-This follows the suggestions from the [documentation](https://facebook.github.io/react-vr/docs/publishing.html) on publishing a project.
+This follows the suggestions from the [documentation](https://facebook.github.io/react-360/docs/publish.html) on publishing a project.
 ```
 $ npm run bundle
 $ mkdir docker
@@ -27,7 +27,7 @@ $ cp -r static_assets docker
 
 Open up your `docker/index.html` and make the following changes
 - Change `<script src="./client.bundle?platform=vr"></script>` to `<script src="./client.bundle.js?platform=vr"></script>`
-- Change `'index.bundle?platform=vr&dev=true',` to `'index.bundle.js?platform=vr&dev=true',`
+- Change `'index.bundle?platform=vr&dev=true',` to `'index.bundle.js?platform=vr',`
 
 ```
 ## Optional: run and view the build results on localhost:8081
